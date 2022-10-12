@@ -1,3 +1,5 @@
+//https://zluri-static-page.vercel.app/static.html?UUID=5c1bb6da-dfb7-4940-b5a6-d82c9b13c92d&org_token=org87e2369r7ndew7r3yo&mdm_type=mdm-mac-kandji
+
 const url = window.location.search
 const urlParams = new URLSearchParams(url)
 
@@ -7,6 +9,12 @@ let UUID, org_token, mdm_type;
 UUID = urlParams.get('UUID');
 org_token = urlParams.get('org_token');
 mdm_type = urlParams.get('mdm_type');
+
+let args = JSON.parse(localStorage.getItem('mdm_args'));
+
+if(args)
+  window.location.href = `https://zluri-static-page.vercel.app/static.html?intent=getArgs`
+  // window.location.href = `http://127.0.0.1:5500/static.html?intent=getArgs`
 
 if(intent) {
   if(intent == "getArgs") {
@@ -30,9 +38,5 @@ if(UUID && org_token && mdm_type) {
       org_token,
       mdm_type
   }
-
-localStorage.setItem('mdm_args',JSON.stringify(mdm_args));
-
-window.location.href = `https://zluri-static-page.vercel.app/static.html?intent=getArgs`
-
+  localStorage.setItem('mdm_args',mdm_args);
 }
