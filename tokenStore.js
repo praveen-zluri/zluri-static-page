@@ -13,8 +13,8 @@ mdm_type = urlParams.get('mdm_type');
 let args = JSON.parse(localStorage.getItem('mdm_args'));
 
 if(args)
-  // window.location.href = `https://zluri-static-page.vercel.app/static.html?intent=getArgs`
-  window.location.href = `http://127.0.0.1:5500/static.html?intent=getArgs`
+  window.location.href = `https://zluri-static-page.vercel.app/static.html?intent=getArgs`
+  // window.location.href = `http://127.0.0.1:5500/static.html?intent=getArgs`
 
 if(intent) {
   if(intent == "getArgs") {
