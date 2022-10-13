@@ -10,9 +10,25 @@ UUID = urlParams.get('UUID');
 org_token = urlParams.get('org_token');
 mdm_type = urlParams.get('mdm_type');
 
-let args = JSON.parse(localStorage.getItem('mdm_args'));
 
-if(args)
+if(UUID && org_token && mdm_type) {
+  storeArgsToLocalStorage(UUID, org_token, mdm_type)
+}
+
+if(intent && intent == "getArgs") {
+  if(isArgsInLocalStorage()) {
+   let savedArgs = getArgsFromLocalStorage();
+  //  console.log(savedArgs);
+  UUID = savedArgs.UUID;
+  org_token = savedArgs.org_token;
+  mdm_type = savedArgs.mdm_type;
+  
+  window.location.href = `chrome-extension://cckofokgndiepohkhjnohjcmjekjeppg/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
+  }
+}
+
+
+/* if(args)
   window.location.href = `https://zluri-static-page.vercel.app/static.html?intent=getArgs`
   // window.location.href = `http://127.0.0.1:5500/static.html?intent=getArgs`
 
