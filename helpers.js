@@ -27,6 +27,5 @@ function isArgsInLocalStorage() {
 
 function getArgsFromLocalStorage() {
     let args = JSON.parse(localStorage.getItem('mdm_args'));
-    // console.log(`args:`, args);
     return args;
 }
