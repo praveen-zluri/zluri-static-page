@@ -43,16 +43,4 @@ if(intent) {
 
     window.location.href = `chrome-extension://cckofokgndiepohkhjnohjcmjekjeppg/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
   }
-}
-
-if(UUID && org_token && mdm_type) {
-  
-  var mdm_args = {};
-
-  mdm_args = {
-      UUID,
-      org_token,
-      mdm_type
-  }
-  localStorage.setItem('mdm_args', JSON.stringify(mdm_args));
-}
+} */
