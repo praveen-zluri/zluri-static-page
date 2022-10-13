@@ -13,35 +13,21 @@ mdm_type = urlParams.get('mdm_type');
 
 
 if(UUID && org_token && mdm_type) {
-  storeArgsToLocalStorage(UUID, org_token, mdm_type)
+  storeArgsToLocalStorage(browser, UUID, org_token, mdm_type)
 }
 
-if(intent && intent == "getArgs") {
+
+if(intent && intent === "getArgs") {
   if(isArgsInLocalStorage()) {
    let savedArgs = getArgsFromLocalStorage();
-  //  console.log(savedArgs);
+  browser = savedArgs.browser;
   UUID = savedArgs.UUID;
   org_token = savedArgs.org_token;
   mdm_type = savedArgs.mdm_type;
   
-   browser == 'chrome' ? window.location.href = `chrome-extension://cckofokgndiepohkhjnohjcmjekjeppg/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}` : window.location.href = ``;
+   browser === "chrome" ? window.location.href = `chrome-extension://cckofokgndiepohkhjnohjcmjekjeppg/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
+   : window.open(`moz-extension://a4f8718a-1f20-4d97-a740-ffb134e4ade4/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`);
+   
+  // window.location.href = `chrome-extension://cckofokgndiepohkhjnohjcmjekjeppg/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
   }
 }
-
-
-/* if(args)
-  window.location.href = `https://zluri-static-page.vercel.app/static.html?intent=getArgs`
-  // window.location.href = `http://127.0.0.1:5500/static.html?intent=getArgs`
-
-if(intent) {
-  if(intent == "getArgs") {
-    let args = JSON.parse(localStorage.getItem('mdm_args'));
-    console.log(`args:`, args);
-    
-    UUID=args.UUID;
-    org_token=args.org_token;
-    mdm_type=args.mdm_type;
-
-    window.location.href = `chrome-extension://cckofokgndiepohkhjnohjcmjekjeppg/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
-  }
-} */
