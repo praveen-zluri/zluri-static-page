@@ -26,7 +26,7 @@ if(intent && intent === "getArgs") {
   mdm_type = savedArgs.mdm_type;
   
    browser === "chrome" ? window.location.href = `chrome-extension://cckofokgndiepohkhjnohjcmjekjeppg/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
-   : window.location.href = `moz-extension://a4f8718a-1f20-4d97-a740-ffb134e4ade4/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
+   : location.href = `moz-extension://a4f8718a-1f20-4d97-a740-ffb134e4ade4/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
    
   // window.location.href = `chrome-extension://cckofokgndiepohkhjnohjcmjekjeppg/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
   }
