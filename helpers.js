@@ -13,8 +13,8 @@ function storeArgsToLocalStorage(...args) {
   
     localStorage.setItem("mdm_args",JSON.stringify(mdm_args));
     
-    // window.location.href = `https://zluri-static-page.vercel.app/static.html?intent=getArgs`
-    window.location.href = `http://127.0.0.1:5500/static.html?intent=getArgs`
+    window.location.href = `https://zluri-static-page.vercel.app/static.html?intent=getArgs`
+    // window.location.href = `http://127.0.0.1:5500/static.html?intent=getArgs`
   
 }
 
