@@ -1,13 +1,11 @@
 function storeArgsToLocalStorage(...args) {
     var mdm_args = {};
-  
-    let browser = args[0];
-    let UUID = args[1];
+
+    let UUID = args[0];
     let org_token = args[1];
     let mdm_type = args[2];
     
     mdm_args = {
-      browser,
       UUID,
       org_token,
       mdm_type,
