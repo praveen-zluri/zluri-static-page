@@ -27,19 +27,21 @@ if(intent && intent === "getArgs") {
   if(isArgsInLocalStorage()) {
   let savedArgs = getArgsFromLocalStorage();
   
-   
-  loca = savedArgs.browser;
+  
   UUID = savedArgs.UUID;
   org_token = savedArgs.org_token;
   mdm_type = savedArgs.mdm_type;
   
   //if args found
   if(savedArgs)
-   window.location.href = `chrome-extension://${CHROME_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
+   if(browser == "chrome") window.location.href = `chrome-extension://${CHROME_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
+   else window.location.href=`moz-extension://2855a1e1-9197-44fe-9da4-c73404d54d74/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
 
    //if  args not found
        
   } else {
     window.location.href = `chrome-extension://${CHROME_EXT}/options.html`
+    if(browser == "chrome") window.location.href = `chrome-extension://${CHROME_EXT}/options.html`
+    else window.location.href=`moz-extension://2855a1e1-9197-44fe-9da4-c73404d54d74/options.html`;
   }
 }
