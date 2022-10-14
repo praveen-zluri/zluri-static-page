@@ -35,8 +35,7 @@ if(intent && intent === "getArgs") {
   
   //if args found
   if(savedArgs)
-   browser === "chrome" ? window.location.href = `chrome-extension://${CHROME_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
-   : window.open(`moz-extension://${FIREFOX_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`);
+   window.location.href = `chrome-extension://${CHROME_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
 
    //if  args not found
        
