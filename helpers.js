@@ -17,7 +17,8 @@ function storeArgsToLocalStorage(...args) {
 
 function isArgsInLocalStorage() {
     let args = localStorage.getItem('mdm_args');
-    if(args !== null)
+    let length = localStorage.length;
+    if(args !== null && length)
         return true
     else
         return false

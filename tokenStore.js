@@ -1,6 +1,6 @@
 //https://zluri-static-page.vercel.app/static.html?browser=chrome&UUID=5c1bb6da-dfb7-4940-b5a6-d82c9b13c92d&org_token=org87e2369r7ndew7r3yo&mdm_type=mdm-mac-kandji
 
-const CHROME_EXT = "cckofokgndiepohkhjnohjcmjekjeppg"
+const CHROME_EXT = "cmobkdiplndgpjodaioofofmcikimbdb"
 const FIREFOX_EXT = "4f8718a-1f20-4d97-a740-ffb134e4ade4"
 
 const url = window.location.search
@@ -24,9 +24,9 @@ if(UUID && org_token && mdm_type) {
 
 if(intent && intent === "getArgs") {
   let browser = localStorage.getItem("browser");
+  
   if(isArgsInLocalStorage()) {
   let savedArgs = getArgsFromLocalStorage();
-  
   
   UUID = savedArgs.UUID;
   org_token = savedArgs.org_token;
@@ -40,7 +40,6 @@ if(intent && intent === "getArgs") {
    //if  args not found
        
   } else {
-    window.location.href = `chrome-extension://${CHROME_EXT}/options.html`
     if(browser == "chrome") window.location.href = `chrome-extension://${CHROME_EXT}/options.html`
     else window.location.href=`moz-extension://2855a1e1-9197-44fe-9da4-c73404d54d74/options.html`;
   }
