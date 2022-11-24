@@ -39,7 +39,7 @@ if(intent && intent === "getArgs" && fromBrowser !== null) {
   if(savedArgs)
    if(browser == "chrome") window.location.href = `chrome-extension://${CHROME_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
    else if (browser == "edge-chromium") window.location.href = `chrome-extension://${EDGE_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
-   else if(browser === "firefox") window.location.href=`moz-extension://0716deb9-8d5d-44a9-a963-11ff590c42cc/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
+   else if(browser === "firefox") window.location.href=`moz-extension://aca83cc3-95ec-4c4a-b519-ab74867198af/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
 
    //if  args not found
        
