@@ -9,6 +9,7 @@ const url = window.location.search
 const urlParams = new URLSearchParams(url)
 
 let intent = urlParams.get('intent');
+let fromBrowser = urlParams.get('fromBrowser');
 let UUID, org_token, mdm_type, browser;
 
 
@@ -24,7 +25,7 @@ if(UUID && org_token && mdm_type) {
 }
 
 
-if(intent && intent === "getArgs") {
+if(intent && intent === "getArgs" && fromBrowser !== null) {
   let browser = localStorage.getItem("browser");
   
   if(isArgsInLocalStorage()) {
