@@ -39,13 +39,13 @@ if(intent && intent === "getArgs" && fromBrowser !== null) {
   if(savedArgs)
    if(browser == "chrome") window.location.href = `chrome-extension://${CHROME_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
    else if (browser == "edge-chromium") window.location.href = `chrome-extension://${EDGE_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
-   else if(browser === "firefox") window.location.href=`moz-extension://323f5fe8-5911-4d4c-aaa2-2dbf0afc39f8/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
+   else if(browser === "firefox") window.location.href=`moz-extension://a6de89f7-e7ab-432a-b67a-de6b2263c4a4/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
 
    //if  args not found
        
   } else {
     if(fromBrowser == "chrome" || fromBrowser == "edge-chromium")
     window.location.href = `chrome-extension://${CHROME_EXT}/options.html`
-    else window.location.href=`moz-extension://323f5fe8-5911-4d4c-aaa2-2dbf0afc39f8/options.html`;
+    else window.location.href=`moz-extension://a6de89f7-e7ab-432a-b67a-de6b2263c4a4/options.html`;
   }
 }
