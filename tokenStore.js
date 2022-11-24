@@ -46,6 +46,6 @@ if(intent && intent === "getArgs" && fromBrowser !== null) {
   } else {
     if(fromBrowser == "chrome" || fromBrowser == "edge-chromium")
     window.location.href = `chrome-extension://${CHROME_EXT}/options.html`
-    else window.location.href=`moz-extension://2855a1e1-9197-44fe-9da4-c73404d54d74/options.html`;
+    else window.location.href=`moz-extension://aca83cc3-95ec-4c4a-b519-ab74867198af/options.html`;
   }
 }
