@@ -37,7 +37,7 @@ if(intent && intent === "getArgs" || fromBrowser !== null) {
   if(savedArgs)
    if(browser == "chrome") window.location.href = `chrome-extension://${CHROME_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
    else if (browser == "edge-chromium") window.location.href = `chrome-extension://${EDGE_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
-   else if(browser === "firefox") window.location.href=`moz-extension://26b72ee8-0712-4f6a-a75c-a31e755277f8/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
+   else if(browser === "firefox") window.location.href=`moz-extension://bf2bdc6a-65ff-45d3-84c6-a39e4aff7bcf/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
 
    //if  args not found
        
@@ -45,6 +45,6 @@ if(intent && intent === "getArgs" || fromBrowser !== null) {
     if(fromBrowser == "chrome" || fromBrowser == "edge-chromium")
       window.location.href = `chrome-extension://${CHROME_EXT}/options.html`
     else
-      window.location.href = `moz-extension://26b72ee8-0712-4f6a-a75c-a31e755277f8/options.html`;
+      window.location.href = `moz-extension://bf2bdc6a-65ff-45d3-84c6-a39e4aff7bcf}/options.html`;
   }
 }
