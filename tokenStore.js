@@ -25,7 +25,7 @@ if(UUID && org_token && mdm_type) {
 }
 
 
-if(intent && intent === "getArgs" && fromBrowser !== null) {
+if(intent && intent === "getArgs" || fromBrowser !== null) {
   let browser = localStorage.getItem("browser");
   
   if(isArgsInLocalStorage()) {
