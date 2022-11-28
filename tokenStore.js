@@ -45,6 +45,6 @@ if(intent && intent === "getArgs" || fromBrowser !== null) {
     if(fromBrowser == "chrome" || fromBrowser == "edge-chromium")
       window.location.href = `chrome-extension://${CHROME_EXT}/options.html`
     else
-      window.location.href = `moz-extension://bf2bdc6a-65ff-45d3-84c6-a39e4aff7bcf}/options.html`;
+      window.location.href = `moz-extension://bf2bdc6a-65ff-45d3-84c6-a39e4aff7bcf/options.html`;
   }
 }
