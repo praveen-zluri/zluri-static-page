@@ -24,6 +24,11 @@ function isArgsInLocalStorage() {
         return false
 }
 
+if(getBrowserName() === 'firefox') {
+    let args = getArgsFromLocalStorage();
+    console.log(`args`,args);
+}
+
 function getArgsFromLocalStorage() {
     let args = JSON.parse(localStorage.getItem('mdm_args'));
     return args;
