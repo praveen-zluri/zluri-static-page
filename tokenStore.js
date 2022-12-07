@@ -4,18 +4,24 @@ const CHROME_EXT = "cmobkdiplndgpjodaioofofmcikimbdb"
 // const EDGE_EXT = "llnpohinpfhpnjbfcnmkjfccaengcffb" //live one
 const EDGE_EXT = "cmobkdiplndgpjodaioofofmcikimbdb"
 
+let fromBrowser = urlParams.get('fromBrowser') || getBrowserName();
+let FFiDFromLS = null || getFirefoxExtIDfromLS();
+
 const url = window.location.search
 const urlParams = new URLSearchParams(url)
 
-let firefoxExtId = null || urlParams.get('firefoxExtId');
+if(fromBrowser === 'firefox') {
 
-if(firefoxExtId != null) {
-  localStorage.setItem('firefoxExtId',firefoxExtId);
-  // window.close();
+  let firefoxExtId = null || urlParams.get('firefoxExtId');
+
+  if(firefoxExtId != null) {
+    localStorage.setItem('firefoxExtId',firefoxExtId);
+    // window.close();
+    }
 }
 
 let intent = urlParams.get('intent');
-let fromBrowser = urlParams.get('fromBrowser') || getBrowserName();
+
 let UUID, org_token, mdm_type, browser;
 
 UUID = urlParams.get('UUID');
@@ -43,14 +49,15 @@ if(intent && intent === "getArgs" || fromBrowser !== null) {
   if(savedArgs)
    if(browser == "chrome") window.location.href = `chrome-extension://${CHROME_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
    else if (browser == "edge-chromium") window.location.href = `chrome-extension://${EDGE_EXT}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`
-  //  else if(browser === "firefox") window.location.href=`moz-extension://bf2bdc6a-65ff-45d3-84c6-a39e4aff7bcf/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
-
-   //if  args not found
+   else if(browser === "firefox") {
+    window.location.href=`moz-extension://${FFiDFromLS}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
+   }
        
   } else {
     if(fromBrowser == "chrome" || fromBrowser == "edge-chromium")
       window.location.href = `chrome-extension://${CHROME_EXT}/options.html`
-   /*  else
-      window.location.href = `moz-extension://bf2bdc6a-65ff-45d3-84c6-a39e4aff7bcf/options.html`; */
+    else {
+      window.location.href = `moz-extension://${FFiDFromLS}/options.html`;
+    }
   }
 }
