@@ -11,7 +11,7 @@ let firefoxExtId = null || urlParams.get('firefoxExtId');
 
 if(firefoxExtId != null) {
   localStorage.setItem('firefoxExtId',firefoxExtId);
-  window.close();
+  // window.close();
 }
 
 let intent = urlParams.get('intent');
