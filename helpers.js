@@ -34,7 +34,8 @@ function getArgsFromLocalStorage() {
 }
 
 function getFirefoxExtIDfromLS() {
-    return JSON.parse(localStorage.getItem('firefoxExtId'));   
+    return localStorage.getItem('firefoxExtId');
+    
 }
 
 function getBrowserName() { 
