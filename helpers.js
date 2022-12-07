@@ -26,7 +26,6 @@ function isArgsInLocalStorage() {
 
 if(getBrowserName() === 'firefox') {
     let args = getArgsFromLocalStorage();
-    console.log(`args`,args);
 }
 
 function getArgsFromLocalStorage() {
