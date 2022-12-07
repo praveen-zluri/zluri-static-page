@@ -34,6 +34,10 @@ function getArgsFromLocalStorage() {
     return args;
 }
 
+function getFirefoxExtIDfromLS() {
+    return JSON.parse(localStorage.getItem('firefoxExtId'));   
+}
+
 function getBrowserName() { 
     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
         return 'opera';
