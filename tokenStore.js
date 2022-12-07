@@ -4,11 +4,11 @@ const CHROME_EXT = "cmobkdiplndgpjodaioofofmcikimbdb"
 // const EDGE_EXT = "llnpohinpfhpnjbfcnmkjfccaengcffb" //live one
 const EDGE_EXT = "cmobkdiplndgpjodaioofofmcikimbdb"
 
-let fromBrowser = urlParams.get('fromBrowser') || getBrowserName();
 let FFiDFromLS = null || getFirefoxExtIDfromLS();
 
 const url = window.location.search
 const urlParams = new URLSearchParams(url)
+let fromBrowser = urlParams.get('fromBrowser') || getBrowserName();
 
 if(fromBrowser === 'firefox') {
 
