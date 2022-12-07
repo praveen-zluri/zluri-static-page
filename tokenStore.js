@@ -17,7 +17,8 @@ if(fromBrowser === 'firefox') {
   if(firefoxExtId != null) {
     localStorage.setItem('firefoxExtId',firefoxExtId);
     // window.close();
-    }
+    window.location.href=`moz-extension://${FFiDFromLS}/options.html?UUID=${UUID}&org_token=${org_token}&mdm_type=${mdm_type}`;
+  }
 }
 
 let intent = urlParams.get('intent');
