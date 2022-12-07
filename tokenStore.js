@@ -17,7 +17,7 @@ if(fromBrowser === 'firefox') {
   if(firefoxExtId != null) {
     localStorage.setItem('firefoxExtId',firefoxExtId);
     // window.close();
-    window.location.href=`https://zluri-static-page.vercel.app/static.html?intent=getArgs&fromBrowser=${get_browser().name}`;
+    window.location.href=`https://zluri-static-page.vercel.app/static.html?intent=getArgs&fromBrowser=${getBrowserName()}`;
   }
 }
 
