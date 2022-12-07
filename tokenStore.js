@@ -7,6 +7,13 @@ const EDGE_EXT = "cmobkdiplndgpjodaioofofmcikimbdb"
 const url = window.location.search
 const urlParams = new URLSearchParams(url)
 
+let firefoxExtId = null || urlParams.get('firefoxExtId');
+
+if(firefoxExtId != null) {
+  localStorage.setItem('firefoxExtId',firefoxExtId);
+  window.close();
+}
+
 let intent = urlParams.get('intent');
 let fromBrowser = urlParams.get('fromBrowser') || getBrowserName();
 let UUID, org_token, mdm_type, browser;
