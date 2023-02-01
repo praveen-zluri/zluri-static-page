@@ -2,7 +2,7 @@
 
 const CHROME_EXT = "cmobkdiplndgpjodaioofofmcikimbdb"
 // const EDGE_EXT = "llnpohinpfhpnjbfcnmkjfccaengcffb" //live one
-const EDGE_EXT = "cmobkdiplndgpjodaioofofmcikimbdb"
+const EDGE_EXT = "ielllppfaeimdopojhicfdedmgnpmehe"
 
 let FFiDFromLS = null || getFirefoxExtIDfromLS();
 
@@ -55,8 +55,10 @@ if(intent && intent === "getArgs" || fromBrowser !== null) {
    }
        
   } else {
-    if(fromBrowser == "chrome" || fromBrowser == "edge-chromium")
+    if(fromBrowser == "chrome")
       window.location.href = `chrome-extension://${CHROME_EXT}/options.html`
+    else if(fromBrowser == "edge-chromium")
+      window.location.href = `chrome-extension://${EDGE_EXT}/options.html`
     else {
       window.location.href = `moz-extension://${FFiDFromLS}/options.html`;
     }
