@@ -1,8 +1,7 @@
 //https://zluri-static-page.vercel.app/static.html?browser=chrome&UUID=5c1bb6da-dfb7-4940-b5a6-d82c9b13c92d&org_token=org87e2369r7ndew7r3yo&mdm_type=mdm-mac-kandji
 
-const CHROME_EXT = "cmobkdiplndgpjodaioofofmcikimbdb"
-// const EDGE_EXT = "llnpohinpfhpnjbfcnmkjfccaengcffb" //live one
-const EDGE_EXT = "ielllppfaeimdopojhicfdedmgnpmehe"
+const CHROME_EXT = "cmobkdiplndgpjodaioofofmcikimbdb";
+const EDGE_EXT = "llnpohinpfhpnjbfcnmkjfccaengcffb";
 
 let FFiDFromLS = null || getFirefoxExtIDfromLS();
 
